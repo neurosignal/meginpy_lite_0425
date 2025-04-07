@@ -5,11 +5,12 @@ meginpy_lite_0425
 
 A module to convert string type digitization into extra type headshape points.
 
-
 How to use
 ===========
 
-Installation
+There are two ways to use the module: i) by installing, ii) adding it to your script
+
+i) Installation
 ------------
 
 Download the software:
@@ -18,18 +19,26 @@ Download the software:
 
     git clone https://github.com/neurosignal/meginpy_lite_0425.git
 
-Move the directory to you:
+Get into directory:
 
 .. code-block:: bash
 
-    cd pseudo-MRI-engine
+    cd meginpy_lite_0425
 
-Set up a Python environment, for example as:
+Install it:
 
 .. code-block:: bash
 
-    conda activate <your_environment>
+    python setup.py install
 
+ii) Adding the path into you script
+
+.. code-block:: bash
+
+    import sys
+    sys.path.append(..../meginpy_lite_0425/)
+    from digitization import string2extra
+    
 Run to check and install all dependencies for the pseudo-MRI engine:
 
 .. code-block:: bash
