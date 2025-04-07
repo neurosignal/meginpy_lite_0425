@@ -18,20 +18,18 @@ Download the software:
 .. code-block:: bash
 
     git clone https://github.com/neurosignal/meginpy_lite_0425.git
-
-Get into directory:
-
-.. code-block:: bash
-
     cd meginpy_lite_0425
-
-Install it:
+    python setup.py install
+    
+Usage:
 
 .. code-block:: bash
 
-    python setup.py install
+    from meginpy_lite_0425.digitization import string2extra
+    raw = string2extra(fname, hostname=ip_adr, username=uname, password=pswrd, raw_new_fname=False)
 
-ii) Adding the path into you script
+
+ii) Adding its path into your script
 ------------
 
 .. code-block:: bash
@@ -39,15 +37,12 @@ ii) Adding the path into you script
     import sys
     sys.path.append(..../meginpy_lite_0425/)
     from digitization import string2extra
-    
-Run to check and install all dependencies for the pseudo-MRI engine:
+    raw = string2extra(fname, hostname=ip_adr, username=uname, password=pswrd, raw_new_fname=False)
 
-.. code-block:: bash
-
-    pip install -r requirements.txt
-
-Check the installation: 
-
-.. code-block:: bash
-
-    python pseudoMRI_engine.py --help
+For better usage clarity, check out `test_usage.py <https://github.com/neurosignal/meginpy_lite_0425/blob/main/test_usage.py>`_
+  
+Requirements
+============
+ - `Numpy <https://www.numpy.org/>`_
+ - `MNE-Python <https://mne.tools/stable/index.html>`_
+ - `Paramiko==3.5.0 <https://mne.tools/stable/index.html>`_
