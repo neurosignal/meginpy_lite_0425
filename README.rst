@@ -49,5 +49,22 @@ ii) Adding its path into your script
     from digitization import string2extra
     raw = string2extra(fname, hostname=ip_adr, username=uname, password=pswrd, raw_new_fname=False)
 
+For better usage clarity, please check out `test_usage.py <https://github.com/neurosignal/meginpy_lite_0425/blob/main/test_usage.py>`_ file.
+  
+Requirements
+============
+ - `Numpy <https://www.numpy.org/>`_
+ - `MNE-Python <https://mne.tools/stable/index.html>`_
+ - `Paramiko==3.5.0 <https://mne.tools/stable/index.html>`_
+ 
+ 
+Contribution
+============
 
+Contributions are welcome! If you have suggestions or find a bug, please open an issue or submit a pull request.
+
+
+Support
+========
+For further queries, write at support@megin.fi or amit.jaiswal@megin.fi
  
