@@ -32,6 +32,7 @@ Install it:
     python setup.py install
 
 ii) Adding the path into you script
+------------
 
 .. code-block:: bash
 
