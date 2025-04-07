@@ -5,6 +5,12 @@ meginpy_lite_0425
 
 A module to convert string type digitization into extra type headshape points.
 
+It is a temporary workaround until the string gets support by mne-tools. 
+It utilizes MEGIN's show_fiff utility to correctly read all digitization types and then feed back to the file. 
+Optionally the file with the denser digitization points can be written. 
+If show_fiff is not available on the same machine, provide hostname, username, and password for a computer where show_fif is installed.
+The module seamlessly connect to the host machine and perform the task, if the data is readable to the host machine. 
+
 How to use
 ===========
 
@@ -40,7 +46,7 @@ ii) Adding its path into your script
     from digitization import string2extra
     raw = string2extra(fname, hostname=ip_adr, username=uname, password=pswrd, raw_new_fname=False)
 
-For better usage clarity, check out `test_usage.py <https://github.com/neurosignal/meginpy_lite_0425/blob/main/test_usage.py>`_ file.
+For better usage clarity, please check out `test_usage.py <https://github.com/neurosignal/meginpy_lite_0425/blob/main/test_usage.py>`_ file.
   
 Requirements
 ============
