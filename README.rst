@@ -55,3 +55,14 @@ Requirements
  - `Numpy <https://www.numpy.org/>`_
  - `MNE-Python <https://mne.tools/stable/index.html>`_
  - `Paramiko==3.5.0 <https://mne.tools/stable/index.html>`_
+ 
+ 
+ Contribution
+ ============
+
+ Contributions are welcome! If you have suggestions or find a bug, please open an issue or submit a pull request.
+
+
+ Support
+ ========
+ For further queries, write at support@megin.fi or amit.jaiswal@megin.fi
