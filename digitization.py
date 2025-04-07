@@ -43,7 +43,8 @@ def string2extra(raw_fname, showfiff_fname=None, raw_new_fname=None,
     """
     n_orig = len(mne.io.read_info(raw_fname, verbose=False)['dig'])
     if showfiff_fname is None:
-        showfiff_fname = raw_fname.replace('.fif', '_show_fiff%s.txt'%datetime.now().strftime("-%Y%m%d%H%M"))
+        showfiff_fname = raw_fname.replace('.fif', '_show_fiff%s.txt'\
+                                           %datetime.now().strftime("-%Y%m%d%H%M"))
     # Run MEGIN's show_fiff
     bin_name = '/neuro/bin/util/show_fiff'
     command     = f'{bin_name} -vt234 %s > %s'%(raw_fname, showfiff_fname)
@@ -74,7 +75,8 @@ def string2extra(raw_fname, showfiff_fname=None, raw_new_fname=None,
     raw = mne.io.read_raw_fif(raw_fname, preload=True)
     print('\n\nOriginal: ', raw)
     new_dig = raw.info['dig']
-    cnt = 1 if raw.info['dig'][-1]['kind']!=mne.io.constants.FIFF.FIFFV_POINT_EXTRA else raw.info['dig'][-1]['ident']
+    cnt = 1 if raw.info['dig'][-1]['kind']!=mne.io.constants.FIFF.FIFFV_POINT_EXTRA \
+        else raw.info['dig'][-1]['ident']
     for ii in range(len(raw.info['dig']), all_digs.shape[0]):
         cnt += 1
         tmp_extra               = deepcopy(raw.info['dig'][-1])
@@ -92,5 +94,6 @@ def string2extra(raw_fname, showfiff_fname=None, raw_new_fname=None,
         raw.save(raw_new_fname, overwrite=overwrite)
         print('Raw file with dense extra points was written at %s'%raw_new_fname)
     return raw
+
 
     
