@@ -92,4 +92,5 @@ def string2extra(raw_fname, showfiff_fname=None, raw_new_fname=None,
         raw.save(raw_new_fname, overwrite=overwrite)
         print('Raw file with dense extra points was written at %s'%raw_new_fname)
     return raw
+
     
