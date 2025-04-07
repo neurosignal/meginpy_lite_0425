@@ -23,7 +23,7 @@ def main():
                          'Topic :: miscs.',
                          'Operating System :: Unix, ?'],
             packages=find_packages(),
-            install_requires=['mne', 'paramiko', 'numpy', 'datetime', 'shutil'],
+            install_requires=['mne', 'paramiko', 'numpy', 'datetime'],
             )
 
 if __name__ == '__main__':
