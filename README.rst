@@ -13,7 +13,7 @@ There are two ways to use the module: i) by installing, ii) adding it to your sc
 i) Installation
 ------------
 
-Download the software:
+Download the software and install it:
 
 .. code-block:: bash
 
@@ -36,10 +36,11 @@ ii) Adding its path into your script
 
     import sys
     sys.path.append(..../meginpy_lite_0425/)
+    
     from digitization import string2extra
     raw = string2extra(fname, hostname=ip_adr, username=uname, password=pswrd, raw_new_fname=False)
 
-For better usage clarity, check out `test_usage.py <https://github.com/neurosignal/meginpy_lite_0425/blob/main/test_usage.py>`_
+For better usage clarity, check out `test_usage.py <https://github.com/neurosignal/meginpy_lite_0425/blob/main/test_usage.py>`_ file.
   
 Requirements
 ============
